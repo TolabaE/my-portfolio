@@ -1,0 +1,253 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* declaro mis variables de colores */
+:root{
+    --first-color-palette:#668dc0;
+    --second-color-palette:#0f1c30;
+    --third-color-palette:#304a6e;
+    --fourth-color-palette:#c0d0ef;
+    --fifth-color-palette: #c2c6ce;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: var(--fourth-color-palette);
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+}
+nav li{
+    list-style-type: none;
+}
+nav a{
+    text-decoration: none;
+}
+h2{
+    text-decoration: none;
+    text-align: center;
+    color: var(--third-color-palette);
+    padding: 10px;
+    font-size: 2em;
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--first-color-palette);
+    padding: 10px;
+}
+.navbar a{
+    text-decoration: none;
+    color: var(--fifth-color-palette);
+    padding: 10px;
+    font-weight: 700;
+}
+.logo{
+    margin-right: 50px;
+}
+.list{
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+}
+#toggler,.navbar label{
+    display: none;
+}
+.border{
+    border-bottom:8px groove var(--second-color-palette);
+}
+/* estilos del footer */
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--second-color-palette);
+    color: white;
+    padding:5%; 
+}
+/* estilos de la seccion home */
+/* .home{
+    height: 100vh;
+} */
+.home{
+    background-image: url(https://hdwallpaperim.com/wp-content/uploads/2017/08/25/454968-computer-artwork-modern.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0px;
+    height: 100vh;
+}
+.div-home-children{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+/* .container-img-home{
+    width: 250px;
+    height: 250px;
+}
+.img-div{
+    width: 100%;
+} */
+.text-home{
+    width: 60%;
+}
+.text-home h3{
+    font-family: 'PT Serif', serif;
+    color: white;
+    font-size: 40px;
+}
+.text-home div{
+    display: flex;
+    align-items: center;
+}
+.github{
+    background-color: white;
+    border-radius: 12px;
+}
+#title-develoment{
+    font-family: 'Roboto Mono', monospace;
+    font-size:xx-large;
+    color: var(--fifth-color-palette);
+}
+/* estilos de la seccion about me */
+.container-about{
+    height: 100vh;
+    padding: 10px;
+}
+.container-profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.my-img{
+    width: 350px;
+    border-radius: 50%;
+    border: 10px groove var(--third-color-palette);
+}
+.personal-info{
+    padding: 15px 30px;
+}
+.about-text{
+    padding: 15px;
+}
+/* estilos de la seccion contacto */
+.container-form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color:var(--first-color-palette) ;
+    border-radius: 15px;
+    margin: 1% 20%;
+    padding:30px 50px;
+}
+.input-names{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+.input-names input {
+    width: 38%;
+}
+.container-form input {
+    padding:5px;
+    margin: 5px 0px;
+}
+.container-form p {
+    font-size: larger;
+}
+.contact-title{
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    color: var(--fifth-color-palette);
+    background-color: var(--first-color-palette);
+}
+/* estilos de la seccion servicios */
+.services{
+    height: 100vh;
+}
+
+@media (max-width:767px) {
+    .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .list{
+        flex-direction: column;
+        align-items: left;
+    }
+    .navbar label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggler:checked ~ .menu{
+        max-height: 100%;
+    }
+    /* estilos de la seccion home */
+    /* .div-home-children{
+        flex-direction: column;
+        justify-content: center;
+    } */
+    .text-home{
+        text-align: center;
+    }
+    .text-home h3{
+        font-size: x-large;
+    }
+    #title-develoment{
+        text-align: center;
+        font-size:x-large;
+    }
+    /* estilos de la seccion about me*/
+    .container-profile{
+        flex-direction: column;
+        align-items: center;
+    }
+    .my-img{
+        width: 200px;
+    }
+    .personal-info{
+        padding: 20px;
+    }
+    /* estilos de la seccion contacto */
+    .container-form{
+        text-align: center;
+        margin: 5%;
+        padding: 25px;
+    }
+    .input-names{
+        flex-direction: column;
+    }
+    .input-names input {
+        width: 97%;
+    }
+
+}
+@media (min-width:768px) {
+    .list a:hover{
+        background-color:var(--second-color-palette);
+        color: white;
+        border-radius: 12px;
+    }
+    .container-img-home{
+        width: 450px;
+        height: 450px;
+    }
+    .text-home{
+        align-items: center;
+    }
+    .img-div{
+        width: 100%;
+    }
+}
