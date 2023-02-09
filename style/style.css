@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 /* declaro mis variables de colores */
 :root{
@@ -75,8 +76,8 @@ h2{
     height: 100vh;
 } */
 .home{
-    background-image: url(https://hdwallpaperim.com/wp-content/uploads/2017/08/25/454968-computer-artwork-modern.jpg);
-    background-size:cover;
+    background-image: url('../img/computer-artwork.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     top: 0px;
@@ -84,24 +85,19 @@ h2{
 }
 .div-home-children{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 20px 0px;
+    padding-top: 10% ;
+    padding-left: 50px;
 }
-/* .container-img-home{
-    width: 250px;
-    height: 250px;
-}
-.img-div{
-    width: 100%;
-} */
 .text-home{
     width: 60%;
 }
 .text-home h3{
     font-family: 'PT Serif', serif;
-    color: white;
+    color: var(--fifth-color-palette);
     font-size: 40px;
+    text-align: start;
 }
 .text-home div{
     display: flex;
@@ -111,10 +107,10 @@ h2{
     background-color: white;
     border-radius: 12px;
 }
-#title-develoment{
+.developer{
     font-family: 'Roboto Mono', monospace;
     font-size:xx-large;
-    color: var(--fifth-color-palette);
+    color: white;
 }
 /* estilos de la seccion about me */
 .container-about{
@@ -175,8 +171,18 @@ h2{
 .services{
     height: 100vh;
 }
+.box-img{
+    width: 100px;
+    height: 100px;
+}
+.box-img:hover{
+    box-shadow: 10px 10px 10px var(--first-color-palette);
+}
 
 @media (max-width:767px) {
+    .home{
+        background-size: auto;
+    }
     .menu{
         width: 100%;
         max-height: 0;
@@ -195,10 +201,10 @@ h2{
         max-height: 100%;
     }
     /* estilos de la seccion home */
-    /* .div-home-children{
-        flex-direction: column;
+    .div-home-children{
         justify-content: center;
-    } */
+        padding: 30px 0px;
+    }
     .text-home{
         text-align: center;
     }
